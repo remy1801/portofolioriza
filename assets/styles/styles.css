@@ -1,0 +1,82 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+   }
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header.navbar {
+    max-width: none;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #96B6C5;
+
+    padding-block: 2rem;
+    z-index: 999;
+}
+
+header.navbar .logo img {
+    width: 110px;
+}
+
+header.navbar .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar .nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+header.navbar .nav-list li:hover a {
+    background-color: #425c77;
+    color: white;
+}
+
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+main .depan {
+    background-color: #F1F0E8;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+main .depan .depan-image {
+    flex: 1;
+    display: flex;
+}
+
+main .depan .depan-image img {
+    margin: auto;
+    min-width: 250px;
+    width: 300px;
+}
