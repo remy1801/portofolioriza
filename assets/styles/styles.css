@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
    }
@@ -54,10 +59,9 @@ header.navbar .nav-list li:hover a {
 }
 
 main {
-    background-color: #F1F0E8;
+    background-color: #ADC4CE;
     width: 100%;
     margin-inline: auto;
-    padding: 2rem 4rem;
     flex: 1;
 
     display: flex;
@@ -66,6 +70,7 @@ main {
 }
 
 main .depan {
+    padding: 4rem 4rem;
     max-width: 1200px;
     flex: 1 1;
     display: flex;
@@ -118,11 +123,14 @@ main .depan .depan-deskripsi button:hover {
 }
 
 main .about-me {
-    background-color: #ADC4CE;
-    max-width: 1300px;
-    flex: 1;
-    display: flex;
-    align-items: center;
+    background-color: #425c77;
+    width: 100%;
+    height: auto;
+    flex: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px 160px;
+    
 }
 
 main .about-me .aboutme-deskripsi2 {
@@ -132,4 +140,8 @@ main .about-me .aboutme-deskripsi2 {
 main .about-me h2 {
     text-align: center;
     text-decoration: underline;
+}
+
+main .about-me p {
+    text-align: justify;
 }
