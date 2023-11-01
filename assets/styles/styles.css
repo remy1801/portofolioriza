@@ -7,6 +7,11 @@
     box-sizing: border-box;
    }
 
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
@@ -116,10 +121,16 @@ main .depan .depan-deskripsi button {
     transition: all .15s ease-in;
 }
 
+main .depan .depan-deskripsi button a {
+    text-decoration: none;
+    color: white;
+}
+
 main .depan .depan-deskripsi button:hover {
     border: 3px solid #96B6C5;
     color: #96B6C5;
     background-color: transparent;
+    
 }
 
 main .about-me {
@@ -130,18 +141,31 @@ main .about-me {
     display: inline-block;
     box-sizing: border-box;
     padding: 20px 160px;
-    
-}
-
-main .about-me .aboutme-deskripsi2 {
-    flex: 1 1;
-}
-
-main .about-me h2 {
-    text-align: center;
-    text-decoration: underline;
 }
 
 main .about-me p {
     text-align: justify;
+}
+
+main .myproject {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    max-width: 1350px;
+}
+
+main .myproject .card-project {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+main .myproject .card-project img {
+    margin: auto;
+    min-width: 250px;
+    width: 300px;
+    border: solid;
+    box-shadow: 6px 6px 5px 5px #425c77;
 }
