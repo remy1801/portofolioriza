@@ -1,8 +1,10 @@
-* {
+/* Mengatur ulang padding dan margin default untuk semua elemen */
+* { 
     padding: 0;
     margin: 0;
 }
 
+/* Memastikan semua elemen dan pseudo-elementnya mengikuti model kotak */
 *, *::before, *::after {
     box-sizing: border-box;
    }
