@@ -29,14 +29,27 @@ header.navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #96B6C5;
+    background-color: #425c77;
 
     padding-block: 1.5rem;
     z-index: 999;
+    padding: 25px 10px;
+    transition: all 0.3s; /* Transisi untuk mengubah ukuran navbar */
+    position: sticky; /* Membuat navbar menjadi sticky */
+    top: 0; /* Navbar akan tetap di bagian atas layar */
+}
+
+header.navbar.shrink {
+    padding: 10px; /* Ukuran padding yang lebih kecil saat navbar mengecil */
 }
 
 header.navbar .logo img {
     width: 110px;
+    transition: all 0.3s; /* Transisi untuk mengubah ukuran logo */
+}
+
+header.navbar.shrink .logo img {
+    width: 80px; /* Ukuran yang lebih kecil saat navbar mengecil */
 }
 
 header.navbar .nav-list ul {
@@ -54,14 +67,14 @@ header.navbar .nav-list li a {
     text-decoration: none;
     font-size: 1.05rem;
     font-weight: 500;
-    color: black;
+    color: white;
     padding: .5rem 1.5rem;
     border-radius: 999px;
     transition: all .2s ease-in-out;
 }
 
 header.navbar .nav-list li:hover a {
-    background-color: #425c77;
+    background-color: #96B6C5;
     color: white;
 }
 
@@ -99,6 +112,28 @@ main .depan .depan-deskripsi {
     flex: 1 1;
 }
 
+main .depan .depan-deskripsi .gerak {
+    width: 28ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
 main .depan .depan-deskripsi p {
     text-align: justify;
 }
@@ -118,6 +153,7 @@ main .depan .depan-deskripsi button {
     color: white;
  
     border: 3px solid white;
+    border-radius: 20px;
     background-color: #425c77;
     cursor: pointer;
     transition: all .15s ease-in;
@@ -129,14 +165,14 @@ main .depan .depan-deskripsi button a {
 }
 
 main .depan .depan-deskripsi button:hover {
-    border: 3px solid #96B6C5;
-    color: #96B6C5;
+    border: 3px solid #425c77;
+    color: black;
     background-color: transparent;
     
 }
 
 main .about-me {
-    background-color: #425c77;
+    background-color: #96B6C5;
     width: 100%;
     height: auto;
     flex: auto;
@@ -170,4 +206,90 @@ main .myproject .card-project img {
     width: 300px;
     border: solid;
     box-shadow: 6px 6px 5px 5px #425c77;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #425c77;
+    text-align: center;
+    font-size: .9rem;
+}
+
+footer .contact-logo{
+    display: flex;
+    justify-content: center;
+}
+
+footer .contact-logo img {
+    width: 60px;
+}
+
+footer .footer-list {
+    max-width: none;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #425c77;
+
+    padding-block: 1.5rem;
+    z-index: 999;
+}
+
+footer .footer-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+footer .footer-list li {
+    list-style-type: none;
+}
+
+footer .footer-list li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+footer .social-media {
+    max-width: none;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+footer .social-media ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1.5rem;
+}
+
+footer .social-media li {
+    list-style-type: none;
+}
+
+footer .social-media li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    padding: .2rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+footer .copyright {
+    border-color: black;
 }

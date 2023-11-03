@@ -5,25 +5,44 @@
         <title>Riza's Portofolio</title>
         <link rel="stylesheet" href="assets/styles/styles.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Font Awesome 5.15.4 -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
     </head>
 
     <body>
-        <header class="navbar">
-            <div class="logo">
-                <img src="assets/img/vsacvmei.png" alt="Riza Tech">
+        <header class="navbar" id="navbar">
+            <div class="logo" id="logo">
+                <img src="assets/img/logo.png" alt="Riza Tech">
             </div>
             <div class="nav-list">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#projek">Project</a></li>
                     <li><a href="#aboutme">About Me</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+            <script>
+                window.addEventListener("scroll", function() {
+                    var navbar = document.querySelector("header.navbar");
+                    if (window.scrollY > 0) {
+                        navbar.classList.add("shrink");
+                    } else {
+                        navbar.classList.remove("shrink");
+                    }
+                });
+            </script>
         </header>
 
         <main>
-            <section class="depan">
+            <section class="depan" id="home">
                 <div class="depan-image">
                     <img src="assets/img/fotopenuh.png" alt="Foto Penuh">
                 </div>
@@ -57,6 +76,27 @@
             </section>
         </main>
         
-        <footer></footer>
+        <footer>
+            <div class="contact-logo" id="contact">
+                <img src="assets/img/logo.png" alt="contact-logo">
+            </div>
+            <div class="footer-list">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projek">Project</a></li>
+                    <li><a href="#aboutme">About Me</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <ul>
+                    <li><a href="https://youtube.com/@rizadianiliman6513?si=wH4cO6fUxiGBiImZ"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/rizadianiliman"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://instagram.com/rizadianil?igshid=OGQ5ZDc2ODk2ZA=="><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/riza.dianiliman/"><i class="fab fa-facebook"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright"><p>Riza Dianil Iman Portofolio &#169; 2023, Riza Tech</p></div>
+        </footer>
     </body>
 </html>
