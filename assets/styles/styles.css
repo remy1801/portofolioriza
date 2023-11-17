@@ -118,12 +118,12 @@ main .depan .depan-deskripsi {
 
 main .depan .depan-deskripsi .gerak {
     width: 28ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 1.5em;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;  
+    font-family: monospace;
+    font-size: 1.5em;
 }
 
 @keyframes typing {
@@ -313,3 +313,34 @@ footer .social-media li a {
 footer .copyright {
     border-color: black;
 }
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+    header.navbar {
+      flex-direction: column;
+    }
+    
+    header.navbar.shrink .logo img {
+        width: 50px;
+    }
+   
+    header.navbar .nav-list ul {
+      flex-wrap: wrap;
+      column-gap: .4rem;
+      padding: 5px 0px;
+    }
+   
+    main .depan {
+      flex-direction: column;
+      gap: 2rem;
+    }
+   
+    main .depan .depan-deskripsi .title {
+      font-size: 2rem;
+    }
+
+    main .about-me {
+        width: 100%;
+        padding: 30px;
+    }
+  } 
