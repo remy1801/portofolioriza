@@ -42,16 +42,16 @@ header.navbar {
 }
 
 header.navbar.shrink {
-    padding: 10px; /* Ukuran padding yang lebih kecil saat navbar mengecil */
+    padding: 10px;
 }
 
 header.navbar .logo img {
     width: 110px;
-    transition: all 0.3s; /* Transisi untuk mengubah ukuran logo */
+    transition: all 0.3s;
 }
 
 header.navbar.shrink .logo img {
-    width: 80px; /* Ukuran yang lebih kecil saat navbar mengecil */
+    width: 80px;
 }
 
 header.navbar .nav-list ul {
