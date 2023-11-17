@@ -314,7 +314,6 @@ footer .copyright {
     border-color: black;
 }
 
-/* Medium devices (landscape tablets, 768px and down) */
 @media screen and (max-width: 768px) {
     header.navbar {
       flex-direction: column;
