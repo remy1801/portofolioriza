@@ -4,7 +4,6 @@
     margin: 0;
 }
 
-/* Memastikan semua elemen dan pseudo-elementnya mengikuti model kotak */
 *, *::before, *::after {
     box-sizing: border-box;
    }
@@ -36,9 +35,9 @@ header.navbar {
     padding-block: 1.5rem;
     z-index: 999;
     padding: 25px 10px;
-    transition: all 0.3s; /* Transisi untuk mengubah ukuran navbar */
-    position: sticky; /* Membuat navbar menjadi sticky */
-    top: 0; /* Navbar akan tetap di bagian atas layar */
+    transition: all 0.3s;
+    position: sticky;
+    top: 0;
 }
 
 header.navbar.shrink {
@@ -224,8 +223,98 @@ main .myproject .card-project img {
     margin: auto;
     min-width: 250px;
     width: 300px;
+    height: 350px;
     border: solid;
     box-shadow: 6px 6px 5px 5px #425c77;
+}
+
+main aside {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+}
+
+main aside:hover {
+    width: 260px;
+    height: 330px;
+}
+
+main aside .icon-aside {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+main aside:hover .icon-aside .icon {
+    width: 0;
+}
+
+main aside .icon {
+    width: 65px;
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+main aside .samping {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #88a2be;
+    padding: 1.5rem;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    border: solid 5px white;
+    transform: scale(0);
+    top: 0;
+}
+
+main aside:hover .samping {
+    opacity: 1;
+    transform: scale(1);
+}
+
+main aside .samping img {
+    border: solid white;
+    border-radius: 5px;
+}
+
+main aside table {
+    justify-items: center;
+    align-items: center;
+    font-size: 0.8rem;
+    text-align: justify;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+main aside:hover table {
+    visibility: visible;
+    font-size: .9rem;
+}
+
+main aside img {
+    width: 100px;
+    max-width: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+main aside:hover img {
+    max-width: 150px;
 }
 
 footer {
